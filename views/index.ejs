@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wings | Menu</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/wings.png" />
+  </head>
+  <body>
+    <header>
+      <div id="image1">
+          <input type="radio" name="menu" value="0" checked>
+          <label for="menu">Fayoum & Asyut</label>
+      </div>
+      <div id="image2">
+        <input type="radio" name="menu" value="1">
+        <label for="menu">Cairo & October</label>
+      </div>
+    </header>
+    
+    <div class="body">
+      <div id="F&A" class="image  selected">
+
+        <img src="/images/Fayoum/01.jpg" alt="menu_1" id="F&A_1">
+        <img src="/images/Fayoum/02.jpg" alt="menu_2" id="F&A_2">
+        <img src="/images/Fayoum/03.jpg" alt="menu_3" id="F&A_3">
+        <img src="/images/Fayoum/04.jpg" alt="menu_4" id="F&A_4">
+        <img src="/images/Fayoum/05.jpg" alt="menu_5" id="F&A_5">
+        <img src="/images/Fayoum/06.jpg" alt="menu_6" id="F&A_6">
+        <img src="/images/Fayoum/07.jpg" alt="menu_7" id="F&A_7">
+        <img src="/images/Fayoum/08.jpg" alt="menu_8" id="F&A_8">
+        <img src="/images/Fayoum/09.jpg" alt="menu_9" id="F&A_9">
+        <img src="/images/Fayoum/10.jpg" alt="menu_10" id="F&A_10">
+        <img src="/images/Fayoum/11.jpg" alt="menu_11" id="F&A_11">
+        <img src="/images/Fayoum/12.jpg" alt="menu_12" id="F&A_12">
+        <img src="/images/Fayoum/13.jpg" alt="menu_13" id="F&A_13">
+        <img src="/images/Fayoum/14.jpg" alt="menu_14" id="F&A_14">
+        
+        <nav>
+          <div id="scrollmenu" class="scrollmenu">
+            <a href="#F&A_1">Single Chicken Meals</a>
+            <a href="#F&A_2">Family Chicken Meals</a>
+            <a href="#F&A_3">Chicken Sandwich 1</a>
+            <a href="#F&A_4">Chicken Sandwich 2</a>
+            <a href="#F&A_5">Beff Sandwich 1</a>
+            <a href="#F&A_6">Beff Sandwich 2</a>
+            <a href="#F&A_7">Wings Sandwich</a>
+            <a href="#F&A_8">Kids Meals</a>
+            <a href="#F&A_9">Wings Boxes 1</a>
+            <a href="#F&A_10">Wings Boxes 2</a>
+            <a href="#F&A_11">Appetizers</a>
+            <a href="#F&A_12">Salads & Sauces</a>
+            <a href="#F&A_13">Drinks & Desserts</a>
+            <a href="#F&A_14">Wings Torta</a>
+            </div>
+        </nav>
+      </div>
+      <div id="C&O" class="image" >
+        
+        <img src="/images/Cairo/01.jpg" alt="menu_1" id="C&O_1">
+        <img src="/images/Cairo/02.jpg" alt="menu_2" id="C&O_2">
+        <img src="/images/Cairo/03.jpg" alt="menu_3" id="C&O_3">
+        <img src="/images/Cairo/04.jpg" alt="menu_4" id="C&O_4">
+        <img src="/images/Cairo/05.jpg" alt="menu_5" id="C&O_5">
+        <img src="/images/Cairo/06.jpg" alt="menu_6" id="C&O_6">
+        <img src="/images/Cairo/07.jpg" alt="menu_7" id="C&O_7">
+        <img src="/images/Cairo/08.jpg" alt="menu_8" id="C&O_8">
+        <img src="/images/Cairo/09.jpg" alt="menu_9" id="C&O_9">
+        <img src="/images/Cairo/10.jpg" alt="menu_10" id="C&O_10">
+        <img src="/images/Cairo/11.jpg" alt="menu_11" id="C&O_11">
+        <img src="/images/Cairo/12.jpg" alt="menu_12" id="C&O_12">
+        <img src="/images/Cairo/13.jpg" alt="menu_13" id="C&O_13">
+        <img src="/images/Cairo/14.jpg" alt="menu_14" id="C&O_14">
+
+        <nav>
+          <div id="scrollmenu" class="scrollmenu">
+              <a href="#C&O_1">Single Chicken Meals</a>
+              <a href="#C&O_2">Family Chicken Meals</a>
+              <a href="#C&O_3">Chicken Sandwich 1</a>
+              <a href="#C&O_4">Chicken Sandwich 2</a>
+              <a href="#C&O_5">Beff Sandwich 1</a>
+              <a href="#C&O_6">Beff Sandwich 2</a>
+              <a href="#C&O_7">Wings Sandwich</a>
+              <a href="#C&O_8">Kids Meals</a>
+              <a href="#C&O_9">Wings Boxes 1</a>
+              <a href="#C&O_10">Wings Boxes 2</a>
+              <a href="#C&O_11">Appetizers</a>
+              <a href="#C&O_12">Salads & Sauces</a>
+              <a href="#C&O_13">Drinks & Desserts</a>
+              <a href="#C&O_14">Wings Torta</a>
+            </div>
+        </nav>
+      </div>
+    </div>
+    
+
+    <script>
+      let images = document.querySelectorAll('.body > div');
+      console.log(images);
+      const changeImage = (e) => {
+        images[e.target.value].classList.add('selected');
+        if(e.target.value === "1"){
+          images[0].classList.remove('selected');
+        }else{
+          images[1].classList.remove('selected');
+        }
+      }
+
+      let radioes = document.querySelectorAll('input[type=radio]');
+      radioes.forEach( radio => {
+        radio.addEventListener('change',changeImage);
+      })
+
+      
+    </script>
+  </body>
+</html>
